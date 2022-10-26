@@ -116,9 +116,9 @@ const Register = () => {
                         {error}
                     </Form.Group>
                     <Form.Group className="mb-3 text-danger">
-                        <ButtonGroup className='w-100'>
-                            <Button className='me-2' onClick={handleGoogleSignIn} variant="outline-primary"><FaGoogle /> Login with Google</Button>
-                            <Button variant="outline-secondary" onClick={handleGithubSignIn}><FaGithub /> Login with Github</Button>
+                        <ButtonGroup>
+                            <Button className='me-2 d-block' onClick={handleGoogleSignIn} variant="outline-primary"><FaGoogle /> Login with Google</Button>
+                            <Button className='d-block' variant="outline-secondary" onClick={handleGithubSignIn}><FaGithub /> Login with Github</Button>
                         </ButtonGroup>
                     </Form.Group>
                 </Form>
