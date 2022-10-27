@@ -13,6 +13,7 @@ const Header = () => {
     const navigate = useNavigate()
 
 
+
     const handleLogOut = () => {
         logOut()
             .then(() => {
@@ -26,10 +27,10 @@ const Header = () => {
                 <Navbar.Brand><Link className='text-decoration-none text-dark' to='/'>Tech Learning Mate</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto gap-2">
-                        <Link className='text-decoration-none text-dark' to='/login'>Courses</Link>
+                    <Nav className="me-auto gap-2 text-center">
+                        <Link className='text-decoration-none text-dark' to='/courses'>Courses</Link>
                         <Link className='text-decoration-none text-dark' to='/'>Faq</Link>
-                        <Link className='text-decoration-none text-dark' to='/'>Blog</Link>
+                        <Link className='text-decoration-none text-dark' to='/blog'>Blog</Link>
 
                     </Nav>
                     <Nav className='d-lg-flex align-items-center'>
@@ -54,7 +55,7 @@ const Header = () => {
                                     roundedCircle
                                     src={user.photoURL}
                                 ></Image> :
-                                <FaUser></FaUser>
+                                <>{user?.uid && <FaUser></FaUser>}</>
                             }
                         </Link>
                     </Nav>
