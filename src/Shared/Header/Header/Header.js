@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../../../contexts/UserContext/UserContext';
 
 const Header = () => {
+    const [themeMood, setThemeMood] = useState(true)
     const { user, logOut } = useContext(AuthContext);
     const navigate = useNavigate()
 
@@ -22,15 +23,16 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
-        <Navbar sticky="top" className='mb-4 shadow' collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar sticky="top" className='shadow' collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
                 <Navbar.Brand><Link className='text-decoration-none text-dark' to='/'>Tech Learning Mate</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto gap-2 text-center">
-                        <Link className='text-decoration-none text-dark px-2' to='/courses'>Courses</Link>
-                        <Link className='text-decoration-none text-dark px-2' to='/'>Faq</Link>
-                        <Link className='text-decoration-none text-dark px-2' to='/blog'>Blog</Link>
+                        <Link className='text-decoration-none text-dark px-2' to='/'>HOME</Link>
+                        <Link className='text-decoration-none text-dark px-2' to='/courses'>COURSES</Link>
+                        <Link className='text-decoration-none text-dark px-2' to='/'>FAQ</Link>
+                        <Link className='text-decoration-none text-dark px-2' to='/blog'>BLOGS</Link>
 
                     </Nav>
                     <Nav className='d-lg-flex align-items-center'>
