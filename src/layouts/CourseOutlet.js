@@ -9,7 +9,7 @@ const CourseOutlet = () => {
     return (
         <div>
             <Header></Header>
-            <Container>
+            <Container className='mt-5'>
                 <Row>
                     <Col lg='3' className='d-none d-lg-block'>
                         <LeftSideNav></LeftSideNav>

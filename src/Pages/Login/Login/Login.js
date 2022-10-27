@@ -57,6 +57,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, {replace: true})
             })
             .catch(error => console.error(error))
     }
@@ -66,11 +67,12 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, {replace: true})
             })
             .catch(error => console.error(error))
     }
     return (
-        <Container fluid="md">
+        <Container fluid="md" className='mt-5'>
             <Col lg={3}>
             </Col>
             <Col lg={6} sm={12} className='mx-auto border-1 border-gray shadow-lg p-5 rounded mb-5 text-start'>

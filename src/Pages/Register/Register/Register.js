@@ -79,7 +79,7 @@ const Register = () => {
     }
 
     return (
-        <Container>
+        <Container className='mt-5'>
             <Col lg={3}></Col>
             <Col lg={6} sm={12} className='mx-auto border-1 border-gray shadow-lg p-5 rounded mb-5 text-start'>
                 <Form onSubmit={handleRegister} >
