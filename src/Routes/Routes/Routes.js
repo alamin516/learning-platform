@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import CourseOutlet from "../../layouts/CourseOutlet";
 import Main from "../../layouts/Main";
 import Blog from "../../Pages/Blog/Blog/Blog";
-import Course from "../../Pages/Course/Course/Course";
 import CourseDeails from "../../Pages/CourseDeails/CourseDeails/CourseDeails";
 import Courses from "../../Pages/Courses/Courses/Courses";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
