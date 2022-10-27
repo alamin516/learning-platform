@@ -9,7 +9,6 @@ import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../../../contexts/UserContext/UserContext';
 
 const Header = () => {
-    const [themeMood, setThemeMood] = useState(true)
     const { user, logOut } = useContext(AuthContext);
     const navigate = useNavigate()
 
