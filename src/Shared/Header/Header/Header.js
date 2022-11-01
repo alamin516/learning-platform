@@ -7,10 +7,17 @@ import { FaUser } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../../../contexts/UserContext/UserContext';
-
+import { ThemeContext } from '../../../App';
+import ReactSwitch from 'react-switch';
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     const navigate = useNavigate()
+    const { theme, setTheme } = useContext(ThemeContext);
+
+
+    const handleToggle = () => {
+        setTheme((curr) => curr === "light" ? "dark" : "light")
+    }
 
 
 
@@ -22,16 +29,19 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
-        <Navbar sticky="top" className='shadow' collapseOnSelect expand="lg" bg="light" variant="light">
-            <Container>
+        <Navbar sticky="top" className='shadow App' collapseOnSelect expand="lg" bg={theme} variant="light">
+            <Container className='nav-link'>
                 <Navbar.Brand><Link className='text-decoration-none text-dark' to='/'>Tech Learning Mate</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto gap-2 text-center">
                         <Link className='text-decoration-none text-dark px-2' to='/'>HOME</Link>
                         <Link className='text-decoration-none text-dark px-2' to='/courses'>COURSES</Link>
-                        <Link className='text-decoration-none text-dark px-2' to='/'>FAQ</Link>
+                        <Link className='text-decoration-none text-dark px-2' to='/faq'>FAQ</Link>
                         <Link className='text-decoration-none text-dark px-2' to='/blog'>BLOGS</Link>
+                        <span>☀️</span>
+                        <ReactSwitch onChange={handleToggle} checked={theme === "dark"} />
+                        <span>🌒</span>
 
                     </Nav>
                     <Nav className='d-lg-flex align-items-center'>

@@ -6,7 +6,7 @@ function Course({ course }) {
     const { id, title, description, price, image} = course;
 
     return (
-        <CardGroup className="mb-4">
+        <CardGroup className="mb-4 card" >
             <Card>
                 <Card.Img variant="top" src={image} />
                 <Card.Body>

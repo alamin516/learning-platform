@@ -36,3 +36,64 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom Dark Mode Toggle Element */
+#light{
+  background-color: #f3ebf6;
+}
+
+#dark{
+  background-color: #46045c;
+  color: #f3ebf6;;
+}
+
+
+#dark .card{
+  color: #282c34;
+}
+
+#dark .card a{
+  color: #282c34!important;
+}
+
+#dark a{
+  color: #f3ebf6!important;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-image: url(./assets/Carousel/slider1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+
+}
+
+.banner::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+
+.banner-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

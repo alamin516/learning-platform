@@ -13,7 +13,7 @@ const CourseDeails = () => {
 
 
     return (
-        <div className='my-5'>
+        <div className='mb-5 text-start'>
             <h3>{title}</h3>
             <Image
                 style={{ width: "100%" }}
